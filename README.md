@@ -10,7 +10,7 @@ sudo docker run -d --name=ddns --restart=always \
 	-e "GODADDY_KEY=<YOUR_KEY>" \
 	-e "GODADDY_SECRET=<YOUR_SECRET>" \
 	-e "GODADDY_DOMAIN=mydomain.com" \
-	peteward44/godaddy-ddns
+	loganavatar/rpi-godaddy-ddns
 ```
 
 Update IPV4 address for mysubdomain.mydomain.com
@@ -21,13 +21,12 @@ sudo docker run -d --name=ddns --restart=always \
         -e "GODADDY_DOMAIN=mydomain.com" \
         -e "GODADDY_TYPE=A" \
         -e "GODADDY_NAME=mysubdomain" \
-        peteward44/godaddy-ddns
+        loganavatar/rpi-godaddy-ddns
 ```
 
 ## Building
-sudo docker build --rm -t peteward44/godaddy-ddns .
+sudo docker build --rm -t loganavatar/rpi-godaddy-ddns .
 
 ## Credit
 Forked from https://github.com/peteward44/docker-godaddy-ddns
 Uses modified script from http://teanazar.com/2016/05/godaddy-ddns-updater/
-
