@@ -4,6 +4,7 @@ Raspberry Pi Docker image to provide a DDNS service for godaddy domains. Uses th
 ## Running
 First, get a GoDaddy developer key & secret from https://developer.godaddy.com/keys/. Log in with your GoDaddy account then generate the API key/secret. Note that the very first time you do this, it will be created as .Test. environment (seen at the time of writing). Go back to the same page again or click on the .Keys. top menu then generate a new .Production. API key/secret instead.
 
+### In Docker
 Update IPV4 address for single mydomain.com
 ```
 sudo docker run -d --name=ddns --restart=always \
@@ -22,6 +23,14 @@ sudo docker run -d --name=ddns --restart=always \
         -e "GODADDY_TYPE=A" \
         -e "GODADDY_NAME=mysubdomain" \
         loganavatar/rpi-godaddy-ddns
+```
+
+### In Kubernetes
+Download and edit the k8s-deploy.yml file locally to use your Key/Secret/Domain, and add Type/Name if doing a subdomain.
+
+When you have a finished editing the k8s-deploy.yml file, run this command
+```
+kubectl apply -f k8s-deploy.yml
 ```
 
 ## Building

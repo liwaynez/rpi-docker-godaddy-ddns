@@ -1,0 +1,26 @@
+apiVersion: apps/v1beta2 
+kind: Deployment
+metadata:
+  name: godaddy-ddns
+  labels:
+    app: godaddy-ddns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: godaddy-ddns
+  template:
+    metadata:
+      labels:
+        app: godaddy-ddns
+    spec:
+      containers:
+      - name: godaddy-ddns
+        image: loganavatar/rpi-godaddy-ddns:latest
+        env:
+        - name: GODADDY_KEY
+          value: 
+        - name: GODADDY_SECRET
+          value: 
+        - name: GODADDY_DOMAIN
+          value: 
