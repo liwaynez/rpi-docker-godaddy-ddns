@@ -39,3 +39,4 @@ sudo docker build --rm -t loganavatar/rpi-godaddy-ddns .
 ## Credit
 Forked from https://github.com/peteward44/docker-godaddy-ddns
 Uses modified script from http://teanazar.com/2016/05/godaddy-ddns-updater/
+testing
