@@ -4,5 +4,5 @@ ids=$(docker ps -q)
 for id in $ids
     do
     echo "$id"
-    docker kill $id
+    sudo docker kill $id
     done
