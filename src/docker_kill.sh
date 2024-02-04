@@ -1,5 +1,5 @@
 #!/bin/sh
-ids=$(docker ps -q --filter "name=rpi-cd-tutorial")
+ids=$(docker ps -q)
 for id in $ids
     do
     echo "$id"
