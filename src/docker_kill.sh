@@ -1,5 +1,5 @@
 #!/bin/sh
-echo "starting..."
+echo "Trying to kill docker processes..."
 ids=$(docker ps -q)
 for id in $ids
     do
