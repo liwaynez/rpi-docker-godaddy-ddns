@@ -58,4 +58,4 @@ Let's start!
     ```
     If you see the docker container with image name 'rpi-cd-tutorial:xxx', then the setup is successful.
 14. You can try browse http://{Raspberry-Pi's IP address}:4000/ in the browser and check if you see `Welcome to the Raspberry Pi web application!`.
-15. A push from the local box will kick off a new container on the pi, like it will automatically update the code.
+15. A push from the local box will kick off a new container on the pi, like it will automatically update the code   .
